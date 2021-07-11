@@ -9,23 +9,18 @@
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_title": "Hide Cursor-video",
-    "default_popup": "popup.html"
-  },
   "permissions": [
     "storage"
   ],
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
+        "*://hulu.com/*",
+        "*://funimation.com/*",
+        "*://hbomax.com/*",
+        "*://www.hulu.com/*",
+        "*://www.funimation.com/*",
+        "*://www.hbomax.com/*"
       ],
       "run_at": "document_idle",
       "js": [
